@@ -36,6 +36,7 @@ zstyle ':prezto:module:editor' dot-expansion 'yes'
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
 zstyle ':prezto:module:prompt' theme 'damoekri'
+zstyle ':prezto:module:prompt' pwd-length 'long'
 
 # Enable ssh-agent forwarding.
 zstyle ':prezto:module:ssh-agent' forwarding 'yes'
@@ -49,3 +50,5 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
   'cursor' \
   'root'
 
+
+zstyle ':prezto:module:utility' safe-ops 'yes'
