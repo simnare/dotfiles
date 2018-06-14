@@ -3,5 +3,5 @@
 rm -f "$HOME/.gitignore"
 rm -f "$HOME/.gitconfig"
 
-ln -sFi gitconfig "$HOME/.gitconfig"
-ln -sFi gitignore "$HOME/.gitignore"
+ln -sFi "$PWD/gitconfig" "$HOME/.gitconfig"
+ln -sFi "$PWD/gitignore" "$HOME/.gitignore"
