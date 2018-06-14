@@ -1,7 +1,6 @@
 "No compatibility to traditional vi
 set nocompatible
 
-source ~/.config/nvim/plugins.vim
 
 language en_US
 
@@ -17,10 +16,6 @@ set autoindent nosmartindent
 set nofoldenable
 set foldlevel=2
 set foldmethod=syntax
-inoremap <F9> <C-O>za
-nnoremap <F9> za
-onoremap <F9> <C-C>za
-vnoremap <F9> zf
 
 "set tab characters apart
 set listchars=tab:↹\
@@ -34,9 +29,6 @@ set backspace=2
 
 "Detect modeline hints.
 set modeline
-
-"Disable bell
-set visualbell t_vb=
 
 "Prefer UTF-8.
 set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp949,korea,iso-2022-kr
@@ -119,56 +111,17 @@ set nowb
 "I dislike visual bell as well.
 set novisualbell
 
-"gVim-specific configurations (including MacVim).
-if has("gui_running")
-  set bg=dark
-  set guioptions=egmrLt
-  set linespace=1
-endif
-
-"MacVim-specific configurations.
-if has("gui_macvim") || has("gui_vimr")
-  set imd
-  set guifont=Source_Code_Pro_Light:h16.00
-endif
-
-"GVim under GNOME
-if has("gui_gnome")
-  set guifont="Ubuntu Mono 11"
-endif
-
-"GVim under Windows
-if has("gui_win32")
-  set guifont=Consolas:h11:cANSI
-endif
-
-
-"True colors
-if $TERM_PROGRAM == "iTerm.app"
-  set termguicolors
-  colorscheme one "solarized
-  set background=dark
-else
-  colorscheme material-theme
-  set background=dark
-endif
-
-let mapleader = ','
-
 " Search
 set incsearch       " Find the next match as we type the search
 set hlsearch        " Highlight searches by default
 set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
 
-" Aliases
-cnoreabbrev W w
-cnoreabbrev Ack! Ack
-" Mappings
-nnoremap <C-J> a<CR><Esc>k$
-
 " Ack
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
+source ~/.config/nvim/bindkeys.vim
+source ~/.config/nvim/plugins.vim
+source ~/.config/nvim/colours.vim
