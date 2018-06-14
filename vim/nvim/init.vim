@@ -112,6 +112,9 @@ set autowrite
 set autoread
 set number
 set nowrap
+set noswapfile
+set nobackup
+set nowb
 
 "I dislike visual bell as well.
 set novisualbell
@@ -151,6 +154,12 @@ else
 endif
 
 let mapleader = ','
+
+" Search
+set incsearch       " Find the next match as we type the search
+set hlsearch        " Highlight searches by default
+set ignorecase      " Ignore case when searching...
+set smartcase       " ...unless we type a capital
 
 " Aliases
 cnoreabbrev W w
