@@ -1,6 +1,8 @@
 "No compatibility to traditional vi
 set nocompatible
 
+source ~/.config/nvim/plugins.vim
+
 language en_US
 
 "Syntax highlighting.
@@ -161,4 +163,3 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
-" source ./plugins.vim
