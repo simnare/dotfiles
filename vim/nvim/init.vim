@@ -161,4 +161,4 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
-source ./plugins.vim
+" source ./plugins.vim

@@ -14,7 +14,7 @@ curl -Lo nvim/autoload/plug.vim "$VIM_PLUG_URL"
 
 # Link neovim configuration to ~/.config/nvim
 xdg_config_dir="$HOME/.config"
-nvimrc_name="init.nvim"
+nvimrc_name="init.vim"
 src_nvim_dir="$(pwd)/$(dirname "$0")/nvim"
 src_nvimrc="$src_nvim_dir/$nvimrc_name"
 dst_nvim_dir="$xdg_config_dir/nvim"
