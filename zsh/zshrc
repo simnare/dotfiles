@@ -6,4 +6,15 @@ fi
 unsetopt correct_all
 unsetopt correct
 
+export EDITOR=vim
+export VISUAL=vim
+
+if [ -f $HOME/.zsh.before ]; then
+  source $HOME/.zsh.before
+fi
+
 for config_file ($HOME/.config/zsh/*.zsh) source $config_file
+
+if [ -f $HOME/.zsh.after ]; then
+  source $HOME/.zsh.after
+fi
