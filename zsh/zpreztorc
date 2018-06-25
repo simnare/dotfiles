@@ -25,6 +25,7 @@ zstyle ':prezto:load' pmodule \
   'git' \
   'syntax-highlighting' \
   'history-substring-search' \
+  'terminal' \
   'prompt'
 
 # Set the key mapping style to 'emacs' or 'vi'.
@@ -52,3 +53,7 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
 
 
 zstyle ':prezto:module:utility' safe-ops 'yes'
+
+zstyle ':prezto:module:terminal' auto-title 'yes'
+zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
+zstyle ':prezto:module:terminal:tab-title' format '%s'
