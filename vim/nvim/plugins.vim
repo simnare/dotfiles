@@ -43,6 +43,7 @@ Plug 'sgur/vim-editorconfig'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'whiteinge/diffconflicts'
 
 
 "End plugin list --------------------------------------------------------------
