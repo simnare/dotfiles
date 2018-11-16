@@ -51,6 +51,7 @@ Session.vim
 .idea
 *.sublime-workspace
 *.sublime-project
+.vscode
 #
 # MISC
 # ----------------------------------------------------------------------------------------------
