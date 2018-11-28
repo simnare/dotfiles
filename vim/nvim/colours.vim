@@ -25,7 +25,7 @@ endif
 "True colors
 if $TERM_PROGRAM == "iTerm.app"
   set termguicolors
-  colorscheme one "solarized
+  colorscheme cobalt2
   set background=dark
 else
   colorscheme material-theme

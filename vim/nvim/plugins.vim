@@ -10,6 +10,7 @@ Plug 'altercation/vim-colors-solarized'
 "Plug 'vim-scripts/xoria256.vim'
 "Plug 'jdkanani/vim-material-theme'
 Plug 'rakr/vim-one'
+Plug 'gertjanreynaert/cobalt2-vim-theme'
 
 Plug 'godlygeek/tabular'
 Plug 'pangloss/vim-javascript'
