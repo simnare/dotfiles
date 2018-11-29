@@ -28,6 +28,8 @@ Plug 'digitaltoad/vim-pug'
 Plug 'posva/vim-vue'
 Plug 'briancollins/vim-jst'
 Plug 'vim-scripts/todo-txt.vim'
+Plug 'mxw/vim-jsx'
+Plug 'mattn/emmet-vim'
 
 "Plug 'lifthrasiir/hangeul.vim'
 Plug 'vim-airline/vim-airline'
@@ -83,8 +85,8 @@ let g:ale_fix_on_save = 1
 let g:ale_echo_msg_error_str = 'ERROR'
 let g:ale_echo_msg_warning_str = 'WARN'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:ale_sign_error = '✗'
-let g:ale_sign_warning = '✗'
+let g:ale_sign_error = '●'
+let g:ale_sign_warning = '・'
 
 " CtrlP
 let g:ctrlp_cmd = 'CtrlPMRU'
@@ -107,3 +109,11 @@ let NERDTreeDirArrows = 0
 let g:NERDTreeWinSize = 30
 map <C-\> :NERDTreeToggle<CR>
 map <leader>f :NERDTreeFind<CR>
+
+" Emmet
+let g:user_emmet_leader_key='<Tab>'
+let g:user_emmet_settings = {
+  \  'javascript.jsx' : {
+    \      'extends' : 'jsx',
+    \  },
+  \}
