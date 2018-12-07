@@ -47,6 +47,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'whiteinge/diffconflicts'
+Plug 'ntpeters/vim-better-whitespace'
 
 
 "End plugin list --------------------------------------------------------------
@@ -117,3 +118,6 @@ let g:user_emmet_settings = {
     \      'extends' : 'jsx',
     \  },
   \}
+
+" Whitespace
+autocmd FileType yaml,javascript,html,php EnableStripWhitespaceOnSave
