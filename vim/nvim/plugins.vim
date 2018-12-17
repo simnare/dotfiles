@@ -86,8 +86,10 @@ let g:ale_fix_on_save = 1
 let g:ale_echo_msg_error_str = 'ERROR'
 let g:ale_echo_msg_warning_str = 'WARN'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:ale_sign_error = '●'
-let g:ale_sign_warning = '・'
+let g:ale_sign_error = "◉"
+let g:ale_sign_warning = "◉"
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
 
 " CtrlP
 let g:ctrlp_cmd = 'CtrlPMRU'
