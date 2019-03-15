@@ -31,6 +31,7 @@ Plug 'vim-scripts/todo-txt.vim'
 Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim'
 Plug 'ekalinin/Dockerfile.vim'
+Plug 'StanAngeloff/php.vim'
 
 "Plug 'lifthrasiir/hangeul.vim'
 Plug 'vim-airline/vim-airline'
