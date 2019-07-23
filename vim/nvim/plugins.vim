@@ -53,6 +53,7 @@ Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'whiteinge/diffconflicts'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'majutsushi/tagbar'
 
 
 "End plugin list --------------------------------------------------------------
