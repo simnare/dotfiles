@@ -22,12 +22,6 @@ if has("gui_win32")
 endif
 
 
-"True colors
-if $TERM_PROGRAM == "iTerm.app"
-  set termguicolors
-  colorscheme cobalt2
-  set background=dark
-else
-  colorscheme material-theme
-  set background=dark
-endif
+set termguicolors
+colorscheme cobalt2
+set background=dark
