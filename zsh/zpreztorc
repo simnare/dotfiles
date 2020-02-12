@@ -22,7 +22,6 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'archive' \
   'fasd' \
-  'git' \
   'syntax-highlighting' \
   'history-substring-search' \
   'terminal' \
@@ -36,8 +35,8 @@ zstyle ':prezto:module:editor' dot-expansion 'yes'
 
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'damoekri'
-zstyle ':prezto:module:prompt' pwd-length 'long'
+zstyle ':prezto:module:prompt' theme 'pws'
+zstyle ':prezto:module:prompt' pwd-length 'short'
 
 # Enable ssh-agent forwarding.
 zstyle ':prezto:module:ssh-agent' forwarding 'yes'
