@@ -57,6 +57,7 @@ Plug 'whiteinge/diffconflicts'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'majutsushi/tagbar'
 Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
 
 
 "End plugin list --------------------------------------------------------------
