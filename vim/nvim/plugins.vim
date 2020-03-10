@@ -10,8 +10,9 @@ Plug 'altercation/vim-colors-solarized'
 "Plug 'vim-scripts/xoria256.vim'
 "Plug 'jdkanani/vim-material-theme'
 Plug 'rakr/vim-one'
+Plug 'dunstontc/vim-vscode-theme'
 "Plug 'gertjanreynaert/cobalt2-vim-theme'
-Plug 'arcseldon/vim-cobalt2'
+"Plug 'arcseldon/vim-cobalt2'
 
 Plug 'godlygeek/tabular'
 Plug 'pangloss/vim-javascript'
@@ -55,6 +56,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'whiteinge/diffconflicts'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'majutsushi/tagbar'
+Plug 'Shougo/neosnippet.vim'
 
 
 "End plugin list --------------------------------------------------------------
@@ -72,6 +74,7 @@ nnoremap <F5> :MundoToggle
 
 "deoplete
 let g:deoplete#enable_at_startup = 1
+"call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
 
 "vim-easy-align
 xmap ga <Plug>(EasyAlign)
@@ -112,6 +115,8 @@ let g:go_metalinter_autosave = 0
 let g:go_metalinter_autosave_enabled = ['golint']
 let g:go_auto_type_info = 1
 let g:go_auto_sameids = 1
+let $USE_SYSTEM_GO=1
+
 
 " NERDTree
 let NERDTreeMinimalUI = 1

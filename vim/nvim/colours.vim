@@ -23,5 +23,5 @@ endif
 
 
 set termguicolors
-colorscheme cobalt2
+colorscheme dark_plus
 set background=dark
