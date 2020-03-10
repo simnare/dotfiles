@@ -37,6 +37,7 @@ zstyle ':prezto:module:editor' dot-expansion 'no'
 # Auto set to 'off' on dumb terminals.
 zstyle ':prezto:module:prompt' theme 'pws'
 zstyle ':prezto:module:prompt' pwd-length 'short'
+zstyle ':prezto:module:prompt' show-return-val 'no'
 
 # Enable ssh-agent forwarding.
 zstyle ':prezto:module:ssh-agent' forwarding 'yes'
