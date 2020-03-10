@@ -12,3 +12,7 @@ alias docker-cleanv='printf "\n>>> Deleting dangling volumes\n\n" && docker volu
 
 # Delete all stopped containers and untagged images.
 alias docker-clean='(docker-cleanc || true) && (docker-cleanv || true) && docker-cleani'
+
+# --- Docker compose
+alias dc='docker-compose'
+alias dcr='docker-compose run'
