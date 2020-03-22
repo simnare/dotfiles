@@ -25,6 +25,7 @@ zstyle ':prezto:load' pmodule \
   'syntax-highlighting' \
   'history-substring-search' \
   'terminal' \
+  'tmux' \
   'prompt'
 
 # Set the key mapping style to 'emacs' or 'vi'.
@@ -35,9 +36,11 @@ zstyle ':prezto:module:editor' dot-expansion 'no'
 
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'pws'
+# change the path color
+zstyle ':prompt:pure:path' color 'white'
 zstyle ':prezto:module:prompt' pwd-length 'short'
 zstyle ':prezto:module:prompt' show-return-val 'no'
+zstyle ':prezto:module:prompt' theme 'pure'
 
 # Enable ssh-agent forwarding.
 zstyle ':prezto:module:ssh-agent' forwarding 'yes'
