@@ -115,8 +115,14 @@ let g:go_metalinter_enabled = ['golint', 'errcheck']
 let g:go_metalinter_autosave = 0
 let g:go_metalinter_autosave_enabled = ['golint']
 let g:go_auto_type_info = 1
-let g:go_auto_sameids = 1
+let g:go_auto_info = 1
+let g:go_auto_sameids = 0
 let $USE_SYSTEM_GO=1
+let g:go_info_mode = 'gopls'
+let g:go_def_mode = 'gopls'
+let g:go_referrers_mode = 'gopls'
+let g:go_def_mode = 'gopls'
+let g:go_rename_command = 'gopls'
 
 
 " NERDTree
