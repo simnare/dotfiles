@@ -1,3 +1,13 @@
+
+function! BuildYCM(info)
+  " - name: YouCompleteMe
+  " - status: 'installed'
+  if a:info.status == 'installed' || a:info.force
+    !brew install cmake
+    !python3 ./install.py --go-completer
+  endif
+endfunction
+
 "vim-plug
 call plug#begin('~/.config/nvim/plugged')
 
@@ -44,21 +54,26 @@ Plug 'w0rp/ale'
 Plug 'simnalamburt/vim-mundo'
 Plug 'rhysd/committia.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"Plug 'zchee/deoplete-jedi'
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
+"Plug 'zchee/deoplete-jedi' "deoplete for python
+Plug 'ycm-core/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'junegunn/vim-slash'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'junegunn/vim-easy-align'
 Plug 'sgur/vim-editorconfig'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'mileszs/ack.vim'
+
+"Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'majutsushi/tagbar'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
 Plug 'whiteinge/diffconflicts'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'majutsushi/tagbar'
-Plug 'Shougo/neosnippet.vim'
-Plug 'Shougo/neosnippet-snippets'
 
+Plug 'sirver/ultisnips'
+Plug 'honza/vim-snippets'
 
 "End plugin list --------------------------------------------------------------
 call plug#end()
@@ -67,6 +82,9 @@ call plug#end()
 "vim-airline
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'one'
+let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#buffer_nr_show = 1
 
 "Mundo -- Undo tree visualization
 set undofile
@@ -103,11 +121,17 @@ let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
 
 " CtrlP
-let g:ctrlp_cmd = 'CtrlPMRU'
+let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v[\/]\.(git|hg|svn|node_modules|vendor)$',
     \ 'file': '\v\.(exe|so|dll)$',
     \ }
+
+" Use rg (ripgrep) for ctrlp indexing
+if executable('rg')
+  let g:ctrlp_user_command = 'rg %s -i --no-heading --files --color=never --glob ""'
+  set grepprg=rg\ --color=never\ --vimgrep
+endif
 
 " Vim-go
 let g:go_fmt_command = "goimports"
@@ -124,10 +148,9 @@ let g:go_referrers_mode = 'gopls'
 let g:go_def_mode = 'gopls'
 let g:go_rename_command = 'gopls'
 
-
 " NERDTree
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 0
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeDirArrows = 0
 let g:NERDTreeWinSize = 30
 map <C-\> :NERDTreeToggle<CR>
 map <leader>f :NERDTreeFind<CR>
@@ -142,3 +165,29 @@ let g:user_emmet_settings = {
 
 " Whitespace
 autocmd FileType yaml,javascript,html,php EnableStripWhitespaceOnSave
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<c-s>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" youCompleteMe
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_add_preview_to_completeopt = 1
+
+" fzf
+if has('nvim')
+  tnoremap <a-a> <esc>a
+  tnoremap <a-b> <esc>b
+  tnoremap <a-d> <esc>d
+  tnoremap <a-f> <esc>f
+endif
+let g:fzf_command_prefix = 'F'
+let g:fzf_preview_window = '' " disable preview
+"let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
+let g:fzf_buffers_jump = 1
+nnoremap f :FFiles<CR>
+nnoremap b :FBuffers<CR>
+nnoremap p :FLines<CR>
+nnoremap h :FHistory<CR>
+nnoremap rg :FRg<CR>

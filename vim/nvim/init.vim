@@ -120,11 +120,6 @@ set hlsearch        " Highlight searches by default
 set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
 
-" Ack
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
-
 source ~/.config/nvim/bindkeys.vim
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/colours.vim
