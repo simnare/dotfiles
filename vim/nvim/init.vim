@@ -95,7 +95,7 @@ let g:haskell_hsp           = 0
 let g:elm_format_autosave = 1
 
 "English spelling checker.
-setlocal spelllang=en_us
+set spell spelllang=en_us
 
 "Keep 80 columns.
 set colorcolumn=80
