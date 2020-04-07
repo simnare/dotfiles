@@ -27,6 +27,9 @@ endif
 
 set backspace=2
 
+" mouse mode
+set mouse=a
+
 "Detect modeline hints.
 set modeline
 
