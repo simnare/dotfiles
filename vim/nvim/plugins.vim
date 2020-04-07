@@ -89,7 +89,7 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 "Mundo -- Undo tree visualization
 set undofile
 set undodir=~/.config/nvim/undo
-nnoremap <F5> :MundoToggle
+nnoremap <F5> :MundoToggle<CR>
 
 "deoplete
 let g:deoplete#enable_at_startup = 1
@@ -153,7 +153,7 @@ let g:NERDTreeMinimalUI = 1
 let g:NERDTreeDirArrows = 0
 let g:NERDTreeWinSize = 30
 map <C-\> :NERDTreeToggle<CR>
-map <leader>f :NERDTreeFind<CR>
+map <leader>\ :NERDTreeFind<CR>
 
 " Emmet
 let g:user_emmet_leader_key='<Tab>'
@@ -186,8 +186,8 @@ let g:fzf_command_prefix = 'F'
 let g:fzf_preview_window = '' " disable preview
 "let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
 let g:fzf_buffers_jump = 1
-nnoremap f :FFiles<CR>
-nnoremap b :FBuffers<CR>
-nnoremap p :FLines<CR>
-nnoremap h :FHistory<CR>
-nnoremap rg :FRg<CR>
+nnoremap <leader>f :FFiles<CR>
+nnoremap <leader>b :FBuffers<CR>
+nnoremap <leader>p :FLines<CR>
+nnoremap <leader>h :FHistory<CR>
+nnoremap <leader>rg :FRg<CR>
