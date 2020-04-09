@@ -69,8 +69,9 @@ Plug 'majutsushi/tagbar'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-Plug 'whiteinge/diffconflicts'
+"Plug 'whiteinge/diffconflicts'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'samoshkin/vim-mergetool'
 
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
@@ -191,3 +192,22 @@ nnoremap <leader>b :FBuffers<CR>
 nnoremap <leader>p :FLines<CR>
 nnoremap <leader>h :FHistory<CR>
 nnoremap <leader>rg :FRg<CR>
+
+" mergetool
+nmap <leader>mt <plug>(MergetoolToggle)
+nmap <expr> <C-Left> &diff? '<Plug>(MergetoolDiffExchangeLeft)' : '<C-Left>'
+nmap <expr> <C-Right> &diff? '<Plug>(MergetoolDiffExchangeRight)' : '<C-Right>'
+nmap <expr> <C-Down> &diff? '<Plug>(MergetoolDiffExchangeDown)' : '<C-Down>'
+nmap <expr> <C-Up> &diff? '<Plug>(MergetoolDiffExchangeUp)' : '<C-Up>'
+let g:mergetool_layout = 'mr,b'
+let g:mergetool_prefer_revision = 'local'
+function s:on_mergetool_set_layout(split)
+  if a:split["layout"] ==# 'mr,b' && a:split["split"] ==# 'b'
+    set nodiff
+    set syntax=on
+
+    resize 15
+  endif
+endfunction
+let g:MergetoolSetLayoutCallback = function('s:on_mergetool_set_layout')
+
