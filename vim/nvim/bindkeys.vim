@@ -28,6 +28,3 @@ nnoremap <silent> <F8> :TagbarToggle<CR>
 :nnoremap <A-up> <C-w>k
 :nnoremap <A-right> <C-w>l
 
-
-" terminal
-:tnoremap <Esc> <C-\><C-n>
