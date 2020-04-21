@@ -23,5 +23,6 @@ endif
 
 
 set termguicolors
-colorscheme dark_plus
+colorscheme gruvbox
 set background=dark
+
