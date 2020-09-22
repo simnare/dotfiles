@@ -56,11 +56,12 @@ Plug 'tpope/vim-fugitive'
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
 "Plug 'zchee/deoplete-jedi' "deoplete for python
-Plug 'ycm-core/YouCompleteMe', { 'do': function('BuildYCM') }
+"Plug 'ycm-core/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'junegunn/vim-slash'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'junegunn/vim-easy-align'
 Plug 'sgur/vim-editorconfig'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
