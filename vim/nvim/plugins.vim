@@ -13,6 +13,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 "Plugin list ------------------------------------------------------------------
 
+""" Themes
 Plug 'altercation/vim-colors-solarized'
 "Plug 'vim-scripts/Mustang2'
 "Plug 'vim-scripts/darktango.vim'
@@ -23,6 +24,7 @@ Plug 'rakr/vim-one'
 Plug 'dunstontc/vim-vscode-theme'
 Plug 'morhetz/gruvbox'
 
+""" Language support
 Plug 'godlygeek/tabular'
 Plug 'pangloss/vim-javascript'
 Plug 'achimnol/python-syntax'
@@ -32,6 +34,7 @@ Plug 'lepture/vim-jinja'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'cespare/vim-toml'
 Plug 'stephpy/vim-yaml'
+Plug 'pedrohdz/vim-yaml-folds'
 Plug 'digitaltoad/vim-pug'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'leafgarland/typescript-vim'
@@ -46,7 +49,9 @@ Plug 'StanAngeloff/php.vim'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 Plug 'slim-template/vim-slim'
+Plug 'bazelbuild/vim-bazel'
 
+""" Functionality
 "Plug 'lifthrasiir/hangeul.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'w0rp/ale'
@@ -61,20 +66,20 @@ Plug 'junegunn/vim-slash'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'junegunn/vim-easy-align'
 Plug 'sgur/vim-editorconfig'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'samoshkin/vim-mergetool'
+Plug 'sirver/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'google/vim-maktaba'
 
+""" Navigation
 "Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-"Plug 'whiteinge/diffconflicts'
-Plug 'ntpeters/vim-better-whitespace'
-Plug 'samoshkin/vim-mergetool'
-
-Plug 'sirver/ultisnips'
-Plug 'honza/vim-snippets'
 
 "End plugin list --------------------------------------------------------------
 call plug#end()
