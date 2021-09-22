@@ -1,11 +1,12 @@
 # Load prezto
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
+#if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+#  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+#fi
+#
+#unsetopt correct_all
+#unsetopt correct
 
-unsetopt correct_all
-unsetopt correct
-
+source <("/usr/local/bin/starship" init zsh --print-full-init)
 export EDITOR=vim
 export VISUAL=vim
 
