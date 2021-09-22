@@ -27,3 +27,4 @@ alias gs='git status'
 alias less='less -r'
 alias screen='TERM=screen screen'
 alias vim=nvim
+alias vi=nvim
