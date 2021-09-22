@@ -23,6 +23,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'rakr/vim-one'
 Plug 'dunstontc/vim-vscode-theme'
 Plug 'morhetz/gruvbox'
+Plug 'wojciechkepka/vim-github-dark'
 
 """ Language support
 Plug 'godlygeek/tabular'
