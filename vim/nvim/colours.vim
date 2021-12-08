@@ -23,6 +23,6 @@ endif
 
 
 set termguicolors
-colorscheme ghdark
+colorscheme onedark
 set background=dark
 

@@ -1,4 +1,3 @@
-
 function! BuildYCM(info)
   " - name: YouCompleteMe
   " - status: 'installed'
@@ -24,6 +23,7 @@ Plug 'rakr/vim-one'
 Plug 'dunstontc/vim-vscode-theme'
 Plug 'morhetz/gruvbox'
 Plug 'wojciechkepka/vim-github-dark'
+Plug 'joshdick/onedark.vim'
 
 """ Language support
 Plug 'godlygeek/tabular'
@@ -88,7 +88,7 @@ call plug#end()
 
 "vim-airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'one'
+let g:airline_theme = 'onedark'
 let g:airline#extensions#tabline#enabled = 0
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#tabline#buffer_nr_show = 1
