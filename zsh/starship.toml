@@ -1,12 +1,10 @@
 add_newline = true
 
 [character]      # The name of the module we are configuring is "character"
-symbol = "➜"     # The "symbol" segment is being set to "➜"
-
-scan_timeout = 10
+success_symbol = "➜"     # The "symbol" segment is being set to "➜"
 
 [git_status]
-disabled = true # takes too long in monorepo
+#disabled = true # takes too long in monorepo
 
 [java]
 disabled = true
@@ -15,8 +13,3 @@ disabled = true
 truncation_length = 5
 fish_style_pwd_dir_length = 2
 
-[haskell]
-disabled = true
-
-[gcloud]
-disabled = true
