@@ -1,6 +1,6 @@
 "gVim-specific configurations (including MacVim).
 if has("gui_running")
-  set bg=dark
+  set bg=light
   set guioptions=egmrLt
   set linespace=1
 endif
@@ -23,6 +23,5 @@ endif
 
 
 set termguicolors
-colorscheme onedark
-set background=dark
-
+colorscheme one
+set background=light

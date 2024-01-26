@@ -24,6 +24,7 @@ Plug 'dunstontc/vim-vscode-theme'
 Plug 'morhetz/gruvbox'
 Plug 'wojciechkepka/vim-github-dark'
 Plug 'joshdick/onedark.vim'
+Plug 'arcticicestudio/nord-vim'
 
 """ Language support
 Plug 'godlygeek/tabular'
@@ -38,7 +39,7 @@ Plug 'stephpy/vim-yaml'
 Plug 'pedrohdz/vim-yaml-folds'
 Plug 'digitaltoad/vim-pug'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plug 'leafgarland/typescript-vim'
+"Plug 'leafgarland/typescript-vim'
 Plug 'digitaltoad/vim-pug'
 Plug 'posva/vim-vue'
 Plug 'briancollins/vim-jst'
@@ -46,21 +47,22 @@ Plug 'vim-scripts/todo-txt.vim'
 Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim'
 Plug 'ekalinin/Dockerfile.vim'
-Plug 'StanAngeloff/php.vim'
-Plug 'tpope/vim-rails'
-Plug 'vim-ruby/vim-ruby'
+"Plug 'StanAngeloff/php.vim'
+"Plug 'tpope/vim-rails'
+"Plug 'vim-ruby/vim-ruby'
 Plug 'slim-template/vim-slim'
-Plug 'bazelbuild/vim-bazel'
+"Plug 'bazelbuild/vim-bazel'
 
 """ Functionality
 "Plug 'lifthrasiir/hangeul.vim'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
 Plug 'simnalamburt/vim-mundo'
 Plug 'rhysd/committia.vim'
 Plug 'tpope/vim-fugitive'
-"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
 "Plug 'zchee/deoplete-jedi' "deoplete for python
 "Plug 'ycm-core/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'junegunn/vim-slash'
@@ -88,7 +90,7 @@ call plug#end()
 
 "vim-airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'onedark'
+let g:airline_theme = 'one'
 let g:airline#extensions#tabline#enabled = 0
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#tabline#buffer_nr_show = 1
@@ -107,17 +109,24 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " Ale settings
+let js_fixers = ['prettier', 'eslint']
 let g:ale_linters = {
 \    'haskell': ['stack-build', 'hlint'],
 \    'rust': ['cargo'],
-\    'javascript': ['standard'],
+\    'javascript': js_fixers,
 \    'go': ['goimports', 'gometalinter'],
 \}
 
 let g:ale_fixers = {
-\   'javascript': ['standard'],
-\   'go': ['goimports'],
-\}
+\ '*': ['remove_trailing_lines', 'trim_whitespace'],
+\ 'javascript': js_fixers,
+\ 'javascript.jsx': js_fixers,
+\ 'typescript': js_fixers,
+\ 'typescriptreact': js_fixers,
+\ 'css': ['prettier'],
+\ 'json': ['prettier'],
+\ }
+
 let g:ale_fix_on_save = 1
 let g:ale_echo_msg_error_str = 'ERROR'
 let g:ale_echo_msg_warning_str = 'WARN'
@@ -126,6 +135,10 @@ let g:ale_sign_error = "◉"
 let g:ale_sign_warning = "◉"
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
+let g:ale_completion_autoimport = 1
+let g:ale_virtualtext_cursor = 1
+let g:ale_virtualtext_prefix = "🔥 "
+
 
 " CtrlP
 let g:ctrlp_cmd = 'CtrlPMixed'
@@ -216,4 +229,3 @@ function s:on_mergetool_set_layout(split)
   endif
 endfunction
 let g:MergetoolSetLayoutCallback = function('s:on_mergetool_set_layout')
-
