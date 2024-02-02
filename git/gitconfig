@@ -122,7 +122,7 @@
 
 [core]
   autocrlf = false
-  editor = nvim
+  editor = nvim --noplugin
   excludesfile = ~/.gitignore
   pager = delta
 
